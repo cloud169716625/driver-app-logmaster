@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>my-page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        Your name
+      </ion-col>
+      <ion-col>
+        <ion-input [(ngModel)]="name" class="input"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-button (click)="handleSubmit()" class="submitBtn">
+      Send
+    </ion-button>
+  </ion-grid>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            Time
+          </ion-col>
+          <ion-col>
+            <ion-text *ngIf="time">{{time}}</ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
